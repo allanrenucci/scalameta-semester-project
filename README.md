@@ -98,10 +98,44 @@ Open issue: https://github.com/scalameta/scalameta/issues/901
 ### TODO list:
 
 **Week 1:**
-- [ ] Be familiar with Scalameta and its concepts (e.g. Trees, Tokens, Parser).
+- [x] Be familiar with Scalameta and its concepts (e.g. Trees, Tokens, Parser).
       Read the [Tree Guide](https://scalameta.org/docs/trees/guide.html).
-- [ ] Be familiar with the Scalameta codebase (e.g. `sbt`, compile, test).
-- [ ] Be familiar with Dotty Enums. In particular their syntax.
-- [ ] Think about a tree representation for enums. Some thoughts are already in
+- [x] Be familiar with the Scalameta codebase (e.g. `sbt`, compile, test).
+- [x] Be familiar with Dotty Enums. In particular their syntax.
+- [x] Think about a tree representation for enums. Some thoughts are already in
       the [Scalameta issue](https://github.com/scalameta/scalameta/issues/901).
       However, this was before the [simplification](https://github.com/lampepfl/dotty/pull/4003).
+      
+**Week 2:**
+- [ ] Implement and test the parser for the "Case".
+ 
+ ### DONE:
+ 
+**Week 1:**
+1. Read scalameta files that are interesting for the project
+2. Using AST explorer and code, understand how the AST is built
+3. Read the TreeGuide
+3. Study the Dotty syntax for Enum to compare with Class syntax
+4. Have a first idea of what need to be changed : 
+  * In the method that begins at the line 2872 of scalametaParser: 
+  ```scala
+  def tmplDef(mods: List[Mod]): Member with Stat
+  ```
+    adding a case for the token *KwEnum*, with a structure like the *KwClass* case
+  * In Trees.scala
+  ```scala
+  @ast class Enum(mods: List[Mod],
+                     name: scala.meta.Type.Name,
+                     tparams: List[scala.meta.Type.Param],
+                     ctor: Ctor.Primary,
+                     templ: Template) extends Defn with Member.Type
+  ```
+  
+  for the Enum Case  : 
+  
+  ```scala
+  @ast class Case(mods : List[Mod],
+                    name : scala.meta.Type.Name,
+                    tparams : List[scala.meta.Type.Param],
+                    ctor : Option[Ctor.Primary) extends Defn with Member.Type]
+  ```
