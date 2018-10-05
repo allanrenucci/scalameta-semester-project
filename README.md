@@ -139,3 +139,17 @@ Open issue: https://github.com/scalameta/scalameta/issues/901
                     tparams : List[scala.meta.Type.Param],
                     ctor : Option[Ctor.Primary) extends Defn with Member.Type]
   ```
+
+**Week 2:**
+1. add trait EnumCase extends Defn with Member.Type
+2. add the Defn.Case and Defn.SimpleCases classes in Defn object
+    1. Defn.Case parses the case with constructor or only one case
+    2. Defn.SimpleCases parses case of this form case Foo, Bar
+3. add a case KwCase if ahead token is not object or class in funDefOrDclOrSecondaryCtor method
+4. add the method that parses the case :
+    ```scala
+    def caseDef(mods : List[Mod]) : Stat with Member.Type
+    ```
+5. add a condition in the trait DefIntro (line 520 of ScalametaParser) as this the KwCase is recognize as a Definition intro
+
+  
