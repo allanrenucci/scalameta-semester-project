@@ -107,7 +107,12 @@ Open issue: https://github.com/scalameta/scalameta/issues/901
       However, this was before the [simplification](https://github.com/lampepfl/dotty/pull/4003).
       
 **Week 2:**
-- [ ] Implement and test the parser for the "Case".
+- [x] Implement and test the parser for the "Case".
+
+**Week 3:**
+- [ ] Implement and test the parser for the "Enum"
+- [ ] Find why the LF token is consumed after a case
+- [ ] Modify to permit case parsing only in an enum 
  
  ### DONE:
  
@@ -144,9 +149,9 @@ Open issue: https://github.com/scalameta/scalameta/issues/901
 1. add trait EnumCase extends Defn with Member.Type
 2. add the Defn.Case and Defn.SimpleCases classes in Defn object
     1. Defn.Case parses the case with constructor or only one case
-    2. Defn.SimpleCases parses case of this form case Foo, Bar
+    2. Defn.SimpleCases parses case of this form : case Foo, Bar
 3. add a case KwCase if ahead token is not object or class in funDefOrDclOrSecondaryCtor method
-4. add the method that parses the case :
+4. add and implement the method that parses the case :
     ```scala
     def caseDef(mods : List[Mod]) : Stat with Member.Type
     ```
