@@ -157,4 +157,22 @@ Open issue: https://github.com/scalameta/scalameta/issues/901
     ```
 5. add a condition in the trait DefIntro (line 520 of ScalametaParser) as this the KwCase is recognize as a Definition intro
 
+**Week 3:**
+1. add the Defn.Enum class
+    ```scala
+    @ast class Enum(mods : List[Mod],
+                      name: scala.meta.Type.Name,
+                      tparams: List[scala.meta.Type.Param],
+                      ctor: Ctor.Primary,
+                      templ: Template) extends Defn with Member.Type
+    ```
+2. add the case KwEnum() to the method tmplDef
+    ```scala
+    case KwEnum() =>
+        enumDef(mods)
+    ```
+3. add the KwEnum as a template intro in TemplateIntro
+4. Try to implement a similar solution as the Dotty parser to avoid case being parsed outside an enum's body (using a var)
+5. But after the meeting with @olafurpg, some changes will be done in the code written until now
+
   
