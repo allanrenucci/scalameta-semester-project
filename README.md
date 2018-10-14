@@ -172,6 +172,7 @@ Open issue: https://github.com/scalameta/scalameta/issues/901
         enumDef(mods)
     ```
 3. add the KwEnum as a template intro in TemplateIntro
+4. Add the enumDef method that parses enum
 4. Try to implement a similar solution as the Dotty parser to avoid case being parsed outside an enum's body (using a var)
 5. But after the meeting with @olafurpg, some changes will be done in the code written until now
 
