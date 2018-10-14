@@ -110,10 +110,13 @@ Open issue: https://github.com/scalameta/scalameta/issues/901
 - [x] Implement and test the parser for the "Case".
 
 **Week 3:**
-- [ ] Implement and test the parser for the "Enum"
-- [ ] Find why the LF token is consumed after a case
-- [ ] Modify to permit case parsing only in an enum 
- 
+- [x] Implement and test the parser for the "Enum"
+- [x] Find why the LF token is consumed after a case
+- [x] Modify to permit case parsing only in an enum 
+
+**Week 4:**
+- [ ] Make changes to match the structure decided with @olafurpg
+
  ### DONE:
  
 **Week 1:**
