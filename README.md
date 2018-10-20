@@ -107,6 +107,7 @@ Open issue: https://github.com/scalameta/scalameta/issues/901
       However, this was before the [simplification](https://github.com/lampepfl/dotty/pull/4003).
       
 **Week 2:**
+
 - [x] Implement and test the parser for the "Case".
 
 **Week 3:**
@@ -147,6 +148,7 @@ Open issue: https://github.com/scalameta/scalameta/issues/901
                     tparams : List[scala.meta.Type.Param],
                     ctor : Option[Ctor.Primary) extends Defn with Member.Type]
   ```
+
 
 **Week 2:**
 1. add trait EnumCase extends Defn with Member.Type
