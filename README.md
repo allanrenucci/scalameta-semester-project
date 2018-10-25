@@ -107,8 +107,17 @@ Open issue: https://github.com/scalameta/scalameta/issues/901
       However, this was before the [simplification](https://github.com/lampepfl/dotty/pull/4003).
       
 **Week 2:**
-- [ ] Implement and test the parser for the "Case".
- 
+
+- [x] Implement and test the parser for the "Case".
+
+**Week 3:**
+- [x] Implement and test the parser for the "Enum"
+- [x] Find why the LF token is consumed after a case
+- [x] Modify to permit case parsing only in an enum 
+
+**Week 4:**
+- [ ] Make changes to match the structure decided with @olafurpg
+
  ### DONE:
  
 **Week 1:**
@@ -139,3 +148,40 @@ Open issue: https://github.com/scalameta/scalameta/issues/901
                     tparams : List[scala.meta.Type.Param],
                     ctor : Option[Ctor.Primary) extends Defn with Member.Type]
   ```
+
+
+**Week 2:**
+1. add trait EnumCase extends Defn with Member.Type
+2. add the Defn.Case and Defn.SimpleCases classes in Defn object
+    1. Defn.Case parses the case with constructor or only one case
+    2. Defn.SimpleCases parses case of this form : case Foo, Bar
+3. add a case KwCase if ahead token is not object or class in funDefOrDclOrSecondaryCtor method
+4. add and implement the method that parses the case :
+    ```scala
+    def caseDef(mods : List[Mod]) : Stat with Member.Type
+    ```
+5. add a condition in the trait DefIntro (line 520 of ScalametaParser) as this the KwCase is recognize as a Definition intro
+
+**Week 3:**
+1. add the Defn.Enum class
+    ```scala
+    @ast class Enum(mods : List[Mod],
+                      name: scala.meta.Type.Name,
+                      tparams: List[scala.meta.Type.Param],
+                      ctor: Ctor.Primary,
+                      templ: Template) extends Defn with Member.Type
+    ```
+2. add the case KwEnum() to the method tmplDef
+    ```scala
+    case KwEnum() =>
+        enumDef(mods)
+    ```
+3. add the KwEnum as a template intro in TemplateIntro
+4. Add the enumDef method that parses enum
+    ```scala
+    def enumDef(mods: List[Mod]) : Defn.Enum = atPos(mods, auto){...}
+    ```
+4. Try to implement a similar solution as the Dotty parser to avoid case being parsed outside an enum's body (using a var)
+5. But after the meeting with @olafurpg, some changes will be done in the code written until now
+
+  
