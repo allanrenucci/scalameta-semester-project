@@ -190,6 +190,7 @@ Open issue: https://github.com/scalameta/scalameta/issues/901
 2. Found the problem with \n during parsing case
 
 **Week 5:**
-1. Start to transform the tokenIterator to be a real iterator to let the parser interact with the tokens it will receive. That will solve the problem of the removed end of line when parsing a case.
+1. Start to transform the tokenIterator to be a real iterator to let the parser give information to the iterator for fetching the next token. That will solve the problem of the removed end of line when parsing a case.
+To achieve this, I will change the *SimpleTokenIterator* class to fetch the next token only when *next* is called.
 
   
