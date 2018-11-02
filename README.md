@@ -194,7 +194,7 @@ Open issue: https://github.com/scalameta/scalameta/issues/901
 To achieve this, I will change the *SimpleTokenIterator* class to fetch the next token only when *next* is called.
 
 **Week 6:**
-1. Finish the TokenIterator and open the pull request.
+1. Finish the *SimpleTokenIterator* class and open the pull request.
 2. Add the *adjustSepRegions* in *TokenIterator* trait (to see if it is the right solution).
 3. Put everything together.
 4. Begin to write some tests.
