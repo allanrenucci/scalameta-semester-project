@@ -193,5 +193,11 @@ Open issue: https://github.com/scalameta/scalameta/issues/901
 1. Start to transform the tokenIterator to be a real iterator to let the parser give information to the iterator for fetching the next token. That will solve the problem of the removed end of line when parsing a case.
 To achieve this, I will change the *SimpleTokenIterator* class to fetch the next token only when *next* is called.
 
+**Week 6:**
+1. Finish the TokenIterator and open the pull request.
+2. Add the *adjustSepRegions* in *TokenIterator* trait (to see if it is the right solution).
+3. Put everything together.
+4. Begin to write some tests.
+
 
   
