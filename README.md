@@ -184,4 +184,20 @@ Open issue: https://github.com/scalameta/scalameta/issues/901
 4. Try to implement a similar solution as the Dotty parser to avoid case being parsed outside an enum's body (using a var)
 5. But after the meeting with @olafurpg, some changes will be done in the code written until now
 
+**Week 4:**
+
+1. Transform everything done before to match the structure that we discussed with @olafurpg.
+2. Found the problem with \n during parsing case
+
+**Week 5:**
+1. Start to transform the tokenIterator to be a real iterator to let the parser give information to the iterator for fetching the next token. That will solve the problem of the removed end of line when parsing a case.
+To achieve this, I will change the *SimpleTokenIterator* class to fetch the next token only when *next* is called.
+
+**Week 6:**
+1. Finish the *SimpleTokenIterator* class and open the pull request.
+2. Add the *adjustSepRegions* in *TokenIterator* trait (to see if it is the right solution).
+3. Put everything together.
+4. Begin to write some tests.
+
+
   
