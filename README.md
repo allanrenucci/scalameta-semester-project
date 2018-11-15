@@ -199,5 +199,17 @@ To achieve this, I will change the *SimpleTokenIterator* class to fetch the next
 3. Put everything together.
 4. Begin to write some tests.
 
+**Week 7:**
+1. Make some changes to *SimpleTokenIterator*
+3. Continue writting some tests 
+
+**Week 8:**
+1. Put everything in one commit
+2. PR for the *SimpleTokenIterator* is now merged
+3. Open the PR for parse part
+4. Make test functions to generate tests
+5. Write some tests
+6. Make changes requested by Allan
+
 
   
