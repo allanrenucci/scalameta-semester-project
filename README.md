@@ -212,5 +212,9 @@ To achieve this, I will change the *SimpleTokenIterator* class to fetch the next
 5. Write some tests
 6. Make changes requested by Allan
 
+**Week 9:**
+1. Modify *TreeSyntax.scala* to support Dotty Enum.
+2. Create and populate a TestSuite for *TreeSyntax* (*DottyEnumSyntacticSuite.scala*)
+
 
   
