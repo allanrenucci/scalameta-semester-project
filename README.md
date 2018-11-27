@@ -216,5 +216,13 @@ To achieve this, I will change the *SimpleTokenIterator* class to fetch the next
 1. Modify *TreeSyntax.scala* to support Dotty Enum.
 2. Create and populate a TestSuite for *TreeSyntax* (*DottyEnumSyntacticSuite.scala*)
 
+**Week 10:**
+1. Try to implement a method of the form *onlyAccept(allowed: Mod\*)(mods: List[Mod], errMsg: String)* to only accept a set of modifiers but can't manage to achieve that due to the fact it requires to pass some types (not values) and I didn't achieve to pass a variable number of types as arguments.
+2. So I wrote a method that takes 3 Modifiers and one that takes 1, even if not perfect, it works.
+3. Add some tests for the modifiers
+4. Clone and build *scalameta/scalafmt* and try to do some tests. 
+5. Read *scalameta/scalafmt* code and try to understand how it works.
+6. Read Allan's one and write a plan for the report
+
 
   
