@@ -223,6 +223,7 @@ To achieve this, I will change the *SimpleTokenIterator* class to fetch the next
 4. Clone and build *scalameta/scalafmt* and try to do some tests. 
 5. Read *scalameta/scalafmt* code and try to understand how it works.
 6. Read Allan's one and write a plan for the report
+7. Make changes to *Dotty enum* PR
 
 
   
