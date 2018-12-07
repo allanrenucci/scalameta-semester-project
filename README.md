@@ -225,5 +225,7 @@ To achieve this, I will change the *SimpleTokenIterator* class to fetch the next
 6. Read Allan's one and write a plan for the report
 7. Make changes to *Dotty enum* PR
 
-
+**Week 11:**
+1. Begin writing report
+2. Meeting with Olaf to speak about scalafmt
   
