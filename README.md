@@ -228,4 +228,8 @@ To achieve this, I will change the *SimpleTokenIterator* class to fetch the next
 **Week 11:**
 1. Begin writing report
 2. Meeting with Olaf to speak about scalafmt
-  
+
+**Week 12:**
+1. Finish Scalafmt modifications.
+2. Continue writting report.
+3. Begin to develop VSCode language server.
