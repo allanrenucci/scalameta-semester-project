@@ -200,4 +200,36 @@ To achieve this, I will change the *SimpleTokenIterator* class to fetch the next
 4. Begin to write some tests.
 
 
-  
+**Week 7:**
+1. Make some changes to *SimpleTokenIterator*
+3. Continue writting some tests 
+
+**Week 8:**
+1. Put everything in one commit
+2. PR for the *SimpleTokenIterator* is now merged
+3. Open the PR for parse part
+4. Make test functions to generate tests
+5. Write some tests
+6. Make changes requested by Allan
+
+**Week 9:**
+1. Modify *TreeSyntax.scala* to support Dotty Enum.
+2. Create and populate a TestSuite for *TreeSyntax* (*DottyEnumSyntacticSuite.scala*)
+
+**Week 10:**
+1. Try to implement a method of the form *onlyAccept(allowed: Mod\*)(mods: List[Mod], errMsg: String)* to only accept a set of modifiers but can't manage to achieve that due to the fact it requires to pass some types (not values) and I didn't achieve to pass a variable number of types as arguments.
+2. So I wrote a method that takes 3 Modifiers and one that takes 1, even if not perfect, it works.
+3. Add some tests for the modifiers
+4. Clone and build *scalameta/scalafmt* and try to do some tests. 
+5. Read *scalameta/scalafmt* code and try to understand how it works.
+6. Read Allan's one and write a plan for the report
+7. Make changes to *Dotty enum* PR
+
+**Week 11:**
+1. Begin writing report
+2. Meeting with Olaf to speak about scalafmt
+
+**Week 12:**
+1. Finish Scalafmt modifications.
+2. Continue writting report.
+3. Begin to develop VSCode language server.
